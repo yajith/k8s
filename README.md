@@ -178,3 +178,5 @@ nodeSelector:
 ```
 kubectl patch deployments -n portainer portainer -p '{"spec": {"template": {"spec": {"nodeSelector": {"kubernetes.io/hostname": "'$(kubectl get pods -n portainer -o jsonpath='{ ..nodeName }')'"}}}}}' || (echo Failed to identify current node of portainer pod; exit 1)
 ```
+
+<!-- PLA-1048 fork test: docs-sync write check -->
